@@ -1,12 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Popover, { PopoverProps } from "react-bootstrap/Popover";
+
+const x: PopoverProps = {
+  id: "1",
+  content: true,
+};
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <Popover {...x}>
+          <div />
+        </Popover>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
